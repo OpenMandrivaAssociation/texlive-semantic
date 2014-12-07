@@ -6,7 +6,7 @@
 # catalog-version 2.0
 Name:		texlive-semantic
 Version:	2.0
-Release:	8
+Release:	9
 Summary:	Help for writing programming language semantics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/semantic
