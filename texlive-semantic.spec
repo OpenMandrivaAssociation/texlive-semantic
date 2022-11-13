@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/semantic
-# catalog-date 2007-01-15 20:26:34 +0100
-# catalog-license lppl
-# catalog-version 2.0
 Name:		texlive-semantic
-Version:	2.0
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Help for writing programming language semantics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/semantic
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/semantic.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/semantic.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/semantic.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/semantic.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/semantic.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/semantic.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ Includes T-diagrams, various derivation symbols and inference
 trees.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,24 +41,11 @@ trees.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.0-2
-+ Revision: 755904
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.0-1
-+ Revision: 719502
-- texlive-semantic
-- texlive-semantic
-- texlive-semantic
-- texlive-semantic
-
