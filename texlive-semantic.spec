@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Help for writing programming language semantics
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/semantic
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/semantic
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/semantic.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/semantic.doc.r%{version}.tar.xz
